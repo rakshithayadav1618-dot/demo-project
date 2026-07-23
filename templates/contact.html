@@ -1,35 +1,14 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact QuickCart</title>
-    <style>
-      body { font-family: Arial, sans-serif; margin: 0; background: #f8fafc; color: #1f2937; }
-      nav { background: #111827; color: white; padding: 14px 24px; }
-      nav a { color: white; margin-right: 12px; text-decoration: none; }
-      .container { max-width: 960px; margin: 24px auto; background: white; padding: 24px; border-radius: 16px; }
-      form { display: grid; gap: 10px; }
-      input, textarea, button { padding: 10px; border-radius: 8px; border: 1px solid #d1d5db; }
-      button { background: #2563eb; color: white; cursor: pointer; }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/services">Services</a>
-      <a href="/contact">Contact</a>
-    </nav>
-    <div class="container">
-      <h1>Contact Us</h1>
-      <p>Need help or want business partnership? Reach out to our team.</p>
-      <form>
-        <input placeholder="Your name" />
-        <input placeholder="Email" />
-        <textarea rows="4" placeholder="Message"></textarea>
-        <button type="submit">Send message</button>
-      </form>
-    </div>
-  </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-card">
+  <h1>Contact Us</h1>
+  <p>Need help, want a partnership, or have feedback for our delivery experience? Reach out to our team.</p>
+  <form style="display: grid; gap: 10px; margin-top: 16px;">
+    <input placeholder="Your name" />
+    <input placeholder="Email" />
+    <textarea rows="4" placeholder="Message"></textarea>
+    <button type="submit">Send message</button>
+  </form>
+</div>
+{% endblock %}

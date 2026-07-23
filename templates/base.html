@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title or 'QuickCart Delivery' }}</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f7fb;
+        --panel: #ffffff;
+        --text: #172033;
+        --muted: #5f6b7a;
+        --accent: #2563eb;
+        --accent-2: #14b8a6;
+        --border: #dfe7f2;
+      }
+      * { box-sizing: border-box; }
+      body { font-family: Arial, sans-serif; margin: 0; background: var(--bg); color: var(--text); }
+      a { color: var(--accent); text-decoration: none; }
+      .top-nav { background: linear-gradient(90deg, #0f172a, #1e3a8a); color: white; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+      .top-nav .brand { font-size: 1.2rem; font-weight: bold; letter-spacing: 0.04em; }
+      .top-nav .links a { color: white; margin-left: 12px; opacity: 0.95; }
+      .page { max-width: 1260px; margin: 0 auto; padding: 24px; }
+      .hero { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; padding: 24px; border-radius: 20px; box-shadow: 0 14px 32px rgba(37, 99, 235, 0.15); }
+      .hero h1 { margin: 0 0 8px; font-size: 2rem; }
+      .hero p { margin: 0 0 12px; opacity: 0.95; }
+      .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+      .tag { background: rgba(255,255,255,0.16); padding: 6px 10px; border-radius: 999px; font-size: 0.9rem; }
+      .layout { display: grid; grid-template-columns: 2fr 1fr; gap: 18px; margin-top: 20px; }
+      .panel { background: var(--panel); border-radius: 18px; padding: 18px; box-shadow: 0 10px 24px rgba(15,23,42,0.06); border: 1px solid var(--border); }
+      .filters { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+      .filters input, .filters select, .checkout input, .checkout textarea { padding: 10px; border: 1px solid var(--border); border-radius: 10px; width: 100%; }
+      .product-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      .product-card { border: 1px solid var(--border); border-radius: 14px; padding: 12px; background: #fbfdff; }
+      .product-card strong { display: block; margin-bottom: 4px; }
+      .product-card button, .checkout button { background: var(--accent); color: white; border: none; padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+      .cart-item { display: flex; justify-content: space-between; margin-bottom: 8px; }
+      .summary { font-weight: bold; margin-top: 12px; }
+      .status { color: #047857; font-weight: bold; }
+      .info-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+      .info-box { background: #f8fbff; border: 1px solid var(--border); padding: 14px; border-radius: 14px; }
+      .page-card { background: white; border-radius: 18px; padding: 22px; box-shadow: 0 10px 24px rgba(15,23,42,0.06); border: 1px solid var(--border); }
+      .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+      .card { background: #f8fbff; padding: 14px; border-radius: 14px; border: 1px solid var(--border); }
+      .pill { display: inline-block; background: #e0f2fe; color: #075985; padding: 4px 8px; border-radius: 999px; font-size: 0.8rem; margin-top: 6px; }
+      @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .product-grid { grid-template-columns: 1fr; } .info-grid, .card-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="brand">QuickCart</div>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </nav>
+    <main class="page">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

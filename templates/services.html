@@ -1,33 +1,15 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>QuickCart Services</title>
-    <style>
-      body { font-family: Arial, sans-serif; margin: 0; background: #f8fafc; color: #1f2937; }
-      nav { background: #111827; color: white; padding: 14px 24px; }
-      nav a { color: white; margin-right: 12px; text-decoration: none; }
-      .container { max-width: 960px; margin: 24px auto; background: white; padding: 24px; border-radius: 16px; }
-      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-      .card { background: #fef3c7; padding: 14px; border-radius: 12px; }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/services">Services</a>
-      <a href="/contact">Contact</a>
-    </nav>
-    <div class="container">
-      <h1>Our Services</h1>
-      <div class="grid">
-        <div class="card"><h3>Express Delivery</h3><p>Get essentials delivered within minutes.</p></div>
-        <div class="card"><h3>Scheduled Orders</h3><p>Plan deliveries for your home or office.</p></div>
-        <div class="card"><h3>Subscription Packs</h3><p>Regular supplies at discounted rates.</p></div>
-        <div class="card"><h3>Live Tracking</h3><p>Track your rider in real time.</p></div>
-      </div>
-    </div>
-  </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-card">
+  <h1>Our Services</h1>
+  <div class="card-grid">
+    <div class="card"><h3>Express Delivery</h3><p>Get essentials delivered within minutes, even on short notice.</p></div>
+    <div class="card"><h3>Scheduled Orders</h3><p>Plan deliveries around your routine for your home or office.</p></div>
+    <div class="card"><h3>Subscription Packs</h3><p>Set up recurring supplies at discounted rates and save time each week.</p></div>
+    <div class="card"><h3>Live Tracking</h3><p>Track your rider in real time from checkout to doorstep.</p></div>
+    <div class="card"><h3>Corporate Accounts</h3><p>Offer your team flexible pantry and office-restock solutions.</p></div>
+    <div class="card"><h3>Personalized Picks</h3><p>Build custom lists for family needs, monthly favorites, and special occasions.</p></div>
+  </div>
+</div>
+{% endblock %}
